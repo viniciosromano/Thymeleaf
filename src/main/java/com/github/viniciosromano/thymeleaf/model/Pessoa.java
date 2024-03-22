@@ -3,12 +3,13 @@ package com.github.viniciosromano.thymeleaf.model;
 public class Pessoa {
 	private Long id;
 	private String nome;
-	private String sexo;
+	private SexoTipo sexo;
 		
-	public Pessoa(Long id, String nome, String sexo) {		
+	public Pessoa(Long id, String nome, SexoTipo sexo) {
 		this.id = id;
 		this.nome = nome;
 		this.sexo = sexo;
+		//SexoTipo.ValueOf() caso seja uma String e queira converter em um objeto
 	}
 	
 	public Long getId() {
@@ -23,10 +24,10 @@ public class Pessoa {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getSexo() {
+	public SexoTipo getSexo() {
 		return sexo;
 	}
-	public void setSexo(String sexo) {
+	public void setSexo(SexoTipo sexo) {
 		this.sexo = sexo;
 	}
 	
